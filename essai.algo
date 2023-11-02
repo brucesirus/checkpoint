@@ -1,0 +1,21 @@
+algoritme lecture
+var
+   phrase :string
+   nbrmot ,nbrvoyelle ,longueur:integer
+
+debut
+   nbrmot<-0
+   nbrvoyelle<-0
+   longueur<-0
+   ecrire "entrer une phrase se terminant par un point ";
+   lire phrase
+
+   pour chaque caracteres c dans phrase faire:
+   longueur<-longueur + 1
+   finsi
+   si c<-'':
+   nbrmot<- nbrmot+1
+   si c<-"a" ou "e" ou "i" ou "o" ou "u" ou "y" :
+   nbrvoyelle<- nbrvoyelle +1
+   finsi
+fin   
