@@ -1,0 +1,31 @@
+Algorithme ProduitScalaire(v1, v2)
+    Si Longueur(v1) ≠ Longueur(v2) alors
+        Retourner None  // Les vecteurs doivent avoir la même dimension
+    Fin Si
+    ps <- 0
+    Pour i de 1 à Longueur(v1)
+        ps <- ps + v1[i] * v2[i]
+    Fin Pour
+    Retourner ps
+Fin Algorithme
+
+Algorithme SontOrthogonaux(vecteurs)
+    Pour i de 1 à Longueur(vecteurs) - 1
+        Pour j de i + 1 à Longueur(vecteurs)
+            ps <- ProduitScalaire(vecteurs[i], vecteurs[j])
+            Si ps = 0 alors
+                Afficher "Les vecteurs ", i, " et ", j, " sont orthogonaux."
+            Sinon
+                Afficher "Les vecteurs ", i, " et ", j, " ne sont pas orthogonaux."
+            Fin Si
+        Fin Pour
+    Fin Pour
+Fin Algorithme
+
+Début
+    vecteur1 <- [1, 0, 0]
+    vecteur2 <- [0, 1, 0]
+    vecteur3 <- [0, 0, 1]
+    vecteurs <- [vecteur1, vecteur2, vecteur3]
+    SontOrthogonaux(vecteurs)
+Fin
