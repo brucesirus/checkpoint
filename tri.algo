@@ -1,0 +1,17 @@
+Algorithme TriParInsertion(tableau)
+    Pour i de 1 à Longueur(tableau) - 1
+        elementCourant <- tableau[i]
+        j <- i - 1
+        Tant que j >= 0 et tableau[j] > elementCourant
+            tableau[j + 1] <- tableau[j]
+            j <- j - 1
+        Fin Tant Que
+        tableau[j + 1] <- elementCourant
+    Fin Pour
+Fin Algorithme
+
+Début
+    tableauAtrier <- [12, 11, 13, 5, 6]
+    TriParInsertion(tableauAtrier)
+    Afficher tableauAtrier  // Cela affichera le tableau trié.
+Fin
