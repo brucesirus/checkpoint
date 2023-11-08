@@ -1,0 +1,49 @@
+Algorithme EstPalindrome(mot)
+    Si Longueur(mot) <= 1 alors
+        Retourner Vrai  // Un mot vide ou un mot d'un seul caractère est un palindrome
+    Fin Si
+
+    gauche <- 1
+    droite <- Longueur(mot)
+
+    Tant que gauche < droite
+        Si mot[gauche] ≠ mot[droite] alors
+            Retourner Faux  // Les caractères ne correspondent pas, le mot n'est pas un palindrome
+        Fin Si
+        gauche <- gauche + 1
+        droite <- droite - 1
+    Fin Tant Que
+
+    Retourner Vrai  // Le mot est un palindrome
+Fin Algorithme
+
+Début
+    mot1 <- "gag"
+    mot2 <- "kayak"
+    mot3 <- "php"
+    mot4 <- "radar"
+
+    Si EstPalindrome(mot1) Alors
+        Afficher "mot1 est un palindrome"
+    Sinon
+        Afficher "mot1 n'est pas un palindrome"
+    Fin Si
+
+    Si EstPalindrome(mot2) Alors
+        Afficher "mot2 est un palindrome"
+    Sinon
+        Afficher "mot2 n'est pas un palindrome"
+    Fin Si
+
+    Si EstPalindrome(mot3) Alors
+        Afficher "mot3 est un palindrome"
+    Sinon
+        Afficher "mot3 n'est pas un palindrome"
+    Fin Si
+
+    Si EstPalindrome(mot4) Alors
+        Afficher "mot4 est un palindrome"
+    Sinon
+        Afficher "mot4 n'est pas un palindrome"
+    Fin Si
+Fin
